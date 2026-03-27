@@ -12,10 +12,10 @@ type ContactLink = {
 };
 
 const contactLinks: ContactLink[] = [
-  { channel: "e-mail",   value: personal.email,           href: `mailto:${personal.email}`,            external: false },
-  { channel: "linkedin", value: personal.linkedinDisplay, href: personal.linkedin,                      external: true  },
-  { channel: "github",   value: personal.githubDisplay,   href: personal.github,                        external: true  },
-  { channel: "whatsapp", value: personal.whatsappDisplay, href: `https://wa.me/${personal.whatsapp}`,   external: true  },
+  { channel: "e-mail", value: personal.email, href: `mailto:${personal.email}`, external: false },
+  { channel: "linkedin", value: personal.linkedinDisplay, href: personal.linkedin, external: true },
+  { channel: "github", value: personal.githubDisplay, href: personal.github, external: true },
+  { channel: "whatsapp", value: personal.whatsappDisplay, href: `https://wa.me/${personal.whatsapp}`, external: true },
 ];
 
 const CURRENT_YEAR = new Date().getFullYear();
@@ -117,7 +117,7 @@ export default function Contact() {
 
             <p style={{ fontSize: "0.75rem", color: "var(--muted)", lineHeight: 1.9, maxWidth: "36ch" }}>
               Estou em busca de oportunidades como{" "}
-              <span style={{ color: "var(--text)", fontWeight: 500 }}>desenvolvedor júnior</span>{" "}
+              <span style={{ color: "var(--text)", fontWeight: 500 }}>Analista de Sistemas</span>{" "}
               — remoto ou presencial em BH. Pode me chamar pelo canal que preferir, respondo rápido.
             </p>
 

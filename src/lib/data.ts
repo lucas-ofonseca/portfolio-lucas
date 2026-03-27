@@ -32,20 +32,21 @@ export const experience: ExperienceItem[] = [
   {
     label: "experiência",
     title: "ArcelorMittal",
-    description: "Técnico de Inventário — governança de processos, otimização de estoques e decisões orientadas a dados.",
+    description:
+      "Técnico de Inventário — governança de processos, otimização de estoques e decisões orientadas a dados.",
     highlight: null,
   },
   {
     label: "formação",
     title: "PUC-MG",
-    description: "Sistemas de Informação — em andamento. Logística — concluído.",
-    highlight: null,
+    description: "Logística — concluído.",
+    highlight: "[ Sistemas de Informação — em andamento. ]",
   },
   {
     label: "localização",
     title: "Belo Horizonte, MG",
     description: "remoto ou presencial",
-    highlight: "[ disponível ]",
+    highlight: null,
   },
 ];
 
@@ -73,9 +74,9 @@ export const projects: Project[] = [
       "Plataforma completa para gerenciamento de viagens corporativas — cadastro de rotas, controle de participantes e dashboard de acompanhamento em tempo real. Arquitetura separada em frontend e backend com padrão Controller → Service → Repository, autenticação via middleware e tratamento centralizado de erros.",
     architecture: [
       { layer: "frontend", tags: ["React", "Vite", "TypeScript"] },
-      { layer: "backend",  tags: ["Node.js", "Express", "TypeScript"] },
-      { layer: "banco",    tags: ["Supabase", "PostgreSQL"] },
-      { layer: "deploy",   tags: ["Vercel"] },
+      { layer: "backend", tags: ["Node.js", "Express", "TypeScript"] },
+      { layer: "banco", tags: ["Supabase", "PostgreSQL"] },
+      { layer: "deploy", tags: ["Vercel"] },
     ],
     demoUrl: "https://sgv-sistema-viagens.vercel.app/",
     live: true,
@@ -91,20 +92,20 @@ export const skillCategories: SkillCategory[] = [
   {
     label: "frontend",
     skills: [
-      { name: "React",       highlight: true },
-      { name: "Next.js",     highlight: true },
-      { name: "TypeScript",  highlight: true },
-      { name: "JavaScript",  highlight: true },
-      { name: "HTML5",       highlight: false },
-      { name: "CSS3",        highlight: false },
+      { name: "React", highlight: true },
+      { name: "Next.js", highlight: true },
+      { name: "TypeScript", highlight: true },
+      { name: "JavaScript", highlight: true },
+      { name: "HTML5", highlight: true },
+      { name: "CSS3", highlight: true },
     ],
   },
   {
     label: "backend",
     skills: [
-      { name: "Node.js",   highlight: true },
-      { name: "Express",   highlight: true },
-      { name: "Python",    highlight: true },
+      { name: "Node.js", highlight: true },
+      { name: "Express", highlight: true },
+      { name: "Python", highlight: false },
       { name: "REST APIs", highlight: false },
     ],
   },
@@ -112,28 +113,28 @@ export const skillCategories: SkillCategory[] = [
     label: "banco de dados",
     skills: [
       { name: "PostgreSQL", highlight: true },
-      { name: "Supabase",   highlight: true },
-      { name: "MongoDB",    highlight: false },
-      { name: "MySQL",      highlight: false },
+      { name: "Supabase", highlight: true },
+      { name: "MongoDB", highlight: false },
+      { name: "MySQL", highlight: false },
     ],
   },
   {
     label: "dados & bi",
     skills: [
-      { name: "Power BI",         highlight: true },
-      { name: "Excel avançado",   highlight: true },
-      { name: "SAP",              highlight: true },
+      { name: "Power BI", highlight: true },
+      { name: "Excel avançado", highlight: true },
+      { name: "SAP", highlight: true },
       { name: "Análise de dados", highlight: true },
     ],
   },
   {
     label: "ferramentas & devops",
     skills: [
-      { name: "Git",     highlight: true },
-      { name: "GitHub",  highlight: true },
-      { name: "Vercel",  highlight: true },
+      { name: "Git", highlight: true },
+      { name: "GitHub", highlight: true },
+      { name: "Vercel", highlight: true },
       { name: "VS Code", highlight: true },
-      { name: "Vite",    highlight: true },
+      { name: "Vite", highlight: true },
     ],
   },
 ];
@@ -141,12 +142,12 @@ export const skillCategories: SkillCategory[] = [
 export type HeroTag = { name: string; highlight: boolean };
 
 export const heroStackTags: HeroTag[] = [
-  { name: "React",       highlight: true },
-  { name: "Next.js",     highlight: true },
-  { name: "TypeScript",  highlight: true },
-  { name: "Node.js",     highlight: true },
-  { name: "PostgreSQL",  highlight: true },
-  { name: "Power BI",    highlight: false },
-  { name: "Python",      highlight: false },
-  { name: "Git",         highlight: false },
+  { name: "React", highlight: true },
+  { name: "Next.js", highlight: true },
+  { name: "TypeScript", highlight: true },
+  { name: "Node.js", highlight: true },
+  { name: "PostgreSQL", highlight: true },
+  { name: "Power BI", highlight: true },
+  { name: "Git", highlight: true },
+  { name: "Python", highlight: false },
 ];

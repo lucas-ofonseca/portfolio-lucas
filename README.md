@@ -33,7 +33,7 @@ src/
 - **LinkedIn:** [in/lucas-ofonseca](https://www.linkedin.com/in/lucas-ofonseca/)
 - **GitHub:** [lucas-ofonseca](https://github.com/lucas-ofonseca)
 - **Localização:** Belo Horizonte, MG
-- **Portfólio:** [portfolio-lucas-ofonseca.vercel.app](https://lucas-ofonseca.vercel.app)
+- **Portfólio:** [portfolio-lucas-ofonseca.vercel.app](https://portfolio-lucas-ofonseca.vercel.app/)
 
 ---
 
