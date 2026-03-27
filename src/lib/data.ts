@@ -78,7 +78,7 @@ export const projects: Project[] = [
       { layer: "banco", tags: ["Supabase", "PostgreSQL"] },
       { layer: "deploy", tags: ["Vercel"] },
     ],
-    demoUrl: "https://sgv-sistema-viagens.vercel.app/",
+    demoUrl: "",
     live: true,
   },
 ];

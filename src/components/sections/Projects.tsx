@@ -14,15 +14,15 @@ type SimRow = {
 const BROWSER_DOTS = ["dot-r", "dot-y", "dot-g"] as const;
 
 const SIM_STATS: Stat[] = [
-  { label: "Viagens ativas", val: "12", color: "var(--accent)"  },
-  { label: "Participantes",  val: "48", color: "var(--text)"    },
-  { label: "Concluídas",     val: "31", color: "var(--accent2)" },
+  { label: "Viagens ativas", val: "12", color: "var(--accent)" },
+  { label: "Participantes", val: "48", color: "var(--text)" },
+  { label: "Concluídas", val: "31", color: "var(--accent2)" },
 ];
 
 const SIM_ROWS: SimRow[] = [
-  { dest: "São Paulo → Rio",    date: "12/04", vagas: "4/8", status: "ativo",     sc: { bg: "rgba(126,184,164,0.12)", color: "var(--accent2)", border: "rgba(126,184,164,0.2)" } },
-  { dest: "BH → Brasília",      date: "18/04", vagas: "2/6", status: "em breve",  sc: { bg: "rgba(200,169,110,0.12)", color: "var(--accent)",  border: "rgba(200,169,110,0.2)" } },
-  { dest: "Curitiba → Floripa", date: "02/04", vagas: "6/6", status: "concluído", sc: { bg: "rgba(58,56,48,0.4)",     color: "var(--muted)",   border: "var(--border2)"         } },
+  { dest: "São Paulo → Rio", date: "12/04", vagas: "4/8", status: "ativo", sc: { bg: "rgba(126,184,164,0.12)", color: "var(--accent2)", border: "rgba(126,184,164,0.2)" } },
+  { dest: "BH → Brasília", date: "18/04", vagas: "2/6", status: "em breve", sc: { bg: "rgba(200,169,110,0.12)", color: "var(--accent)", border: "rgba(200,169,110,0.2)" } },
+  { dest: "Curitiba → Floripa", date: "02/04", vagas: "6/6", status: "concluído", sc: { bg: "rgba(58,56,48,0.4)", color: "var(--muted)", border: "var(--border2)" } },
 ];
 
 function ProjectPreview({ project }: { project: Project }) {
@@ -97,7 +97,7 @@ function ProjectPreview({ project }: { project: Project }) {
         {project.live && (
           <span style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.6rem", color: "var(--accent2)", letterSpacing: "0.1em" }}>
             <span style={{ width: "5px", height: "5px", borderRadius: "50%", background: "var(--accent2)", display: "inline-block", animation: "pulse 2s ease-in-out infinite" }} />
-            live no vercel
+            em construção
           </span>
         )}
       </div>
