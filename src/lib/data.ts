@@ -93,11 +93,11 @@ export const skillCategories: SkillCategory[] = [
     label: "frontend",
     skills: [
       { name: "React", highlight: true },
-      { name: "Next.js", highlight: true },
-      { name: "TypeScript", highlight: true },
       { name: "JavaScript", highlight: true },
       { name: "HTML5", highlight: true },
       { name: "CSS3", highlight: true },
+      { name: "TypeScript", highlight: false },
+      { name: "Next.js", highlight: false },
     ],
   },
   {
@@ -122,7 +122,7 @@ export const skillCategories: SkillCategory[] = [
     label: "dados & bi",
     skills: [
       { name: "Power BI", highlight: true },
-      { name: "Excel avançado", highlight: true },
+      { name: "Excel", highlight: true },
       { name: "SAP", highlight: true },
       { name: "Análise de dados", highlight: true },
     ],
@@ -131,10 +131,8 @@ export const skillCategories: SkillCategory[] = [
     label: "ferramentas & devops",
     skills: [
       { name: "Git", highlight: true },
-      { name: "GitHub", highlight: true },
-      { name: "Vercel", highlight: true },
-      { name: "VS Code", highlight: true },
       { name: "Vite", highlight: true },
+      { name: "IA Agents", highlight: true },
     ],
   },
 ];
@@ -143,11 +141,11 @@ export type HeroTag = { name: string; highlight: boolean };
 
 export const heroStackTags: HeroTag[] = [
   { name: "React", highlight: true },
-  { name: "Next.js", highlight: true },
-  { name: "TypeScript", highlight: true },
   { name: "Node.js", highlight: true },
+  { name: "Next.js", highlight: true },
+  { name: "JavaScript", highlight: true },
   { name: "PostgreSQL", highlight: true },
   { name: "Power BI", highlight: true },
-  { name: "Git", highlight: true },
+  { name: "Excel", highlight: true },
   { name: "Python", highlight: false },
 ];

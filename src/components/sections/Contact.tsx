@@ -116,9 +116,9 @@ export default function Contact() {
             </h3>
 
             <p style={{ fontSize: "0.75rem", color: "var(--muted)", lineHeight: 1.9, maxWidth: "36ch" }}>
-              Estou em busca de oportunidades como{" "}
-              <span style={{ color: "var(--text)", fontWeight: 500 }}>Analista de Sistemas</span>{" "}
-              — remoto ou presencial em BH. Pode me chamar pelo canal que preferir, respondo rápido.
+              Estou em busca de oportunidades voltadas para{" "}
+              <span style={{ color: "var(--text)", fontWeight: 500 }}>Dados e Desenvolvimento</span>{" "}
+              — remoto ou presencial em BH. Pode me chamar pelo canal que preferir.
             </p>
 
             <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", fontSize: "0.6rem", color: "var(--dim)", letterSpacing: "0.1em" }}>
