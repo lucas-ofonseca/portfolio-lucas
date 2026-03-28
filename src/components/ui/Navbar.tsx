@@ -6,10 +6,10 @@ import { personal } from "@/lib/data";
 type NavLink = { href: string; label: string };
 
 const navLinks: NavLink[] = [
-  { href: "#home",     label: "_sobre" },
+  { href: "#home", label: "_sobre" },
   { href: "#projetos", label: "_projetos" },
-  { href: "#skills",   label: "_skills" },
-  { href: "#contato",  label: "_contato" },
+  { href: "#skills", label: "_skills" },
+  { href: "#contato", label: "_contato" },
 ];
 
 function NavItem({ href, label }: NavLink) {
@@ -73,7 +73,7 @@ export default function Navbar() {
         ))}
       </ul>
 
-      {personal.available && (
+      {/* {personal.available && (
         <div
           style={{
             display: "flex",
@@ -96,7 +96,7 @@ export default function Navbar() {
           />
           open to work
         </div>
-      )}
+      )} */}
     </nav>
   );
 }
