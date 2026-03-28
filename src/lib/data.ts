@@ -142,10 +142,10 @@ export type HeroTag = { name: string; highlight: boolean };
 export const heroStackTags: HeroTag[] = [
   { name: "React", highlight: true },
   { name: "Node.js", highlight: true },
-  { name: "Next.js", highlight: true },
   { name: "JavaScript", highlight: true },
   { name: "PostgreSQL", highlight: true },
   { name: "Power BI", highlight: true },
   { name: "Excel", highlight: true },
   { name: "Python", highlight: false },
+  { name: "Next.js", highlight: false },
 ];
