@@ -117,7 +117,7 @@ export default function Contact() {
 
             <p style={{ fontSize: "0.75rem", color: "var(--muted)", lineHeight: 1.9, maxWidth: "36ch" }}>
               Estou em busca de oportunidades voltadas para{" "}
-              <span style={{ color: "var(--text)", fontWeight: 500 }}>Dados e Desenvolvimento</span>{" "}
+              <span style={{ color: "var(--text)", fontWeight: 500 }}>Análise de Dados</span>{" "}
               — remoto ou presencial em BH. Pode me chamar pelo canal que preferir.
             </p>
 

@@ -5,7 +5,7 @@
 
 export const personal = {
   name: "Lucas Fonseca",
-  role: "Full Stack Developer",
+  role: "Data-driven & Full Stack Developer",
   tagline: "Conectando dados, lógica e código.",
   description:
     "Desenvolvedor Full Stack e técnico de inventário na ArcelorMittal — curso Sistemas de Informação na PUC-MG e construo soluções que unem experiência operacional com tecnologia.",
@@ -78,7 +78,7 @@ export const projects: Project[] = [
       { layer: "banco", tags: ["Supabase", "PostgreSQL"] },
       { layer: "deploy", tags: ["Vercel"] },
     ],
-    demoUrl: "",
+    demoUrl: "https://sgv-sistema-viagens.vercel.app/",
     live: true,
   },
 ];
