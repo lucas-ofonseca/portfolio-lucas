@@ -41,7 +41,7 @@ export default function Navbar() {
   return (
     <nav
       style={{
-        position: "var(--nav-position, fixed)",
+        position: "var(--nav-position, fixed)" as any,
         top: 0,
         left: 0,
         right: 0,
