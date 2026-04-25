@@ -87,7 +87,7 @@ function FooterNavItem({ href }: { href: string }) {
 export default function Contact() {
   return (
     <section id="contato" style={{ position: "relative", zIndex: 1 }}>
-      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "5rem 3rem 0" }}>
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "var(--section-padding)" }}>
         <SectionHeader
           eyebrow="// vamos conversar"
           title="Contato"
@@ -99,8 +99,8 @@ export default function Contact() {
           }
         />
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1px", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "4px", overflow: "hidden" }}>
-          <div style={{ background: "var(--surface)", padding: "3rem", display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "2.5rem" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "var(--grid-cols)", gap: "1px", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "4px", overflow: "hidden" }}>
+          <div style={{ background: "var(--surface)", padding: "var(--card-padding, 3rem)", display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "2.5rem" }}>
             <h3
               style={{
                 fontFamily: "var(--font-display)",
@@ -115,11 +115,96 @@ export default function Contact() {
               <br />em mente?
             </h3>
 
-            <p style={{ fontSize: "0.75rem", color: "var(--muted)", lineHeight: 1.9, maxWidth: "36ch" }}>
+            <p style={{ fontSize: "0.75rem", color: "var(--muted)", lineHeight: 1.9, maxWidth: "36ch", marginBottom: "2rem" }}>
               Estou em busca de oportunidades voltadas para{" "}
               <span style={{ color: "var(--text)", fontWeight: 500 }}>Análise de Dados</span>{" "}
-              — remoto ou presencial em BH. Pode me chamar pelo canal que preferir.
+              — remoto ou presencial em BH. Pode me chamar pelo canal que preferir ou preencher o formulário.
             </p>
+
+            <form 
+              style={{ 
+                display: "flex", 
+                flexDirection: "column", 
+                gap: "1rem",
+                width: "100%",
+              }}
+              onSubmit={(e) => e.preventDefault()}
+            >
+              <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
+                <label style={{ fontSize: "0.55rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)" }}>Seu Nome</label>
+                <input 
+                  type="text" 
+                  placeholder="Ex: Maria Silva"
+                  style={{ 
+                    background: "var(--bg)", 
+                    border: "1px solid var(--border2)", 
+                    borderRadius: "2px", 
+                    padding: "0.75rem 1rem", 
+                    color: "var(--text)",
+                    fontFamily: "var(--font-mono)",
+                    fontSize: "0.75rem",
+                    outline: "none",
+                    transition: "border-color 0.2s"
+                  }} 
+                />
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
+                <label style={{ fontSize: "0.55rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)" }}>Seu E-mail</label>
+                <input 
+                  type="email" 
+                  placeholder="maria@empresa.com"
+                  style={{ 
+                    background: "var(--bg)", 
+                    border: "1px solid var(--border2)", 
+                    borderRadius: "2px", 
+                    padding: "0.75rem 1rem", 
+                    color: "var(--text)",
+                    fontFamily: "var(--font-mono)",
+                    fontSize: "0.75rem",
+                    outline: "none",
+                    transition: "border-color 0.2s"
+                  }} 
+                />
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
+                <label style={{ fontSize: "0.55rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)" }}>Mensagem</label>
+                <textarea 
+                  rows={3}
+                  placeholder="Como posso ajudar?"
+                  style={{ 
+                    background: "var(--bg)", 
+                    border: "1px solid var(--border2)", 
+                    borderRadius: "2px", 
+                    padding: "0.75rem 1rem", 
+                    color: "var(--text)",
+                    fontFamily: "var(--font-mono)",
+                    fontSize: "0.75rem",
+                    outline: "none",
+                    resize: "none",
+                    transition: "border-color 0.2s"
+                  }} 
+                />
+              </div>
+              <button 
+                type="submit"
+                style={{ 
+                  background: "var(--accent)", 
+                  color: "var(--bg)", 
+                  border: "none", 
+                  borderRadius: "2px", 
+                  padding: "0.85rem", 
+                  fontFamily: "var(--font-mono)", 
+                  fontSize: "0.7rem", 
+                  fontWeight: 600, 
+                  letterSpacing: "0.1em", 
+                  textTransform: "uppercase",
+                  cursor: "pointer",
+                  marginTop: "0.5rem"
+                }}
+              >
+                Enviar Mensagem
+              </button>
+            </form>
 
             <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", fontSize: "0.6rem", color: "var(--dim)", letterSpacing: "0.1em" }}>
               <span style={{ width: "20px", height: "1px", background: "var(--dim)", display: "block" }} />
@@ -134,12 +219,12 @@ export default function Contact() {
           </div>
         </div>
 
-        <footer style={{ marginTop: "4rem", padding: "2rem 0", borderTop: "1px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+        <footer style={{ marginTop: "4rem", padding: "2rem 0", borderTop: "1px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1.5rem" }}>
           <div style={{ fontSize: "0.6rem", color: "var(--dim)", letterSpacing: "0.1em" }}>
             <span style={{ color: "var(--muted)" }}>{personal.name} © {CURRENT_YEAR}</span>
             {" "}· Desenvolvido com Next.js
           </div>
-          <nav style={{ display: "flex", gap: "2rem" }}>
+          <nav style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>
             {["#home", "#projetos", "#skills", "#contato"].map((href) => (
               <FooterNavItem key={href} href={href} />
             ))}

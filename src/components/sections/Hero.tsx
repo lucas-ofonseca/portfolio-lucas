@@ -21,8 +21,7 @@ export default function Hero() {
         position: "relative",
         minHeight: "100vh",
         display: "grid",
-        gridTemplateColumns: "1fr 1fr",
-        paddingTop: "5rem",
+        gridTemplateColumns: "var(--grid-cols)",
         zIndex: 1,
       }}
     >
@@ -44,8 +43,9 @@ export default function Hero() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          padding: "5rem 4rem 5rem 3rem",
+          padding: "var(--hero-padding)",
           borderRight: "1px solid var(--border)",
+          borderBottom: "1px solid var(--border)",
           position: "relative",
           zIndex: 1,
         }}
@@ -153,7 +153,7 @@ export default function Hero() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          padding: "5rem 3rem 5rem 4rem",
+          padding: "var(--section-padding)",
           gap: "1.5rem",
           zIndex: 1,
         }}
@@ -220,6 +220,7 @@ export default function Hero() {
       />
 
       <div
+        className="desktop-only"
         style={{
           position: "absolute",
           bottom: "2rem",
@@ -240,6 +241,7 @@ export default function Hero() {
       </div>
 
       <div
+        className="desktop-only"
         style={{
           position: "absolute",
           bottom: "2rem",

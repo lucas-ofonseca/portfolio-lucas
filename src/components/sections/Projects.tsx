@@ -32,7 +32,7 @@ function ProjectPreview({ project }: { project: Project }) {
         background: "var(--surface2)",
         borderRight: "1px solid var(--border)",
         padding: "2rem",
-        minHeight: "460px",
+        minHeight: "var(--preview-height, 460px)",
         display: "flex",
         flexDirection: "column",
         gap: "1rem",
@@ -78,10 +78,10 @@ function ProjectPreview({ project }: { project: Project }) {
           {SIM_ROWS.map((row) => (
             <div
               key={row.dest}
-              style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: "0.3rem", padding: "0.45rem 0.5rem", background: "var(--surface)", border: "1px solid var(--border)", borderRadius: "3px", alignItems: "center" }}
+              style={{ display: "grid", gridTemplateColumns: "var(--browser-row-grid, 2fr 1fr 1fr 1fr)", gap: "0.3rem", padding: "0.45rem 0.5rem", background: "var(--surface)", border: "1px solid var(--border)", borderRadius: "3px", alignItems: "center" }}
             >
               <span style={{ fontSize: "0.5rem", color: "var(--text)" }}>{row.dest}</span>
-              <span style={{ fontSize: "0.5rem", color: "var(--muted)" }}>{row.date}</span>
+              <span className="desktop-only" style={{ fontSize: "0.5rem", color: "var(--muted)" }}>{row.date}</span>
               <span style={{ fontSize: "0.5rem", color: "var(--text)" }}>{row.vagas}</span>
               <span style={{ fontSize: "0.44rem", padding: "0.15rem 0.4rem", borderRadius: "2px", letterSpacing: "0.06em", background: row.sc.bg, color: row.sc.color, border: `1px solid ${row.sc.border}` }}>
                 {row.status}
@@ -107,7 +107,7 @@ function ProjectPreview({ project }: { project: Project }) {
 
 function ProjectInfo({ project }: { project: Project }) {
   return (
-    <div style={{ padding: "2.5rem", display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "2rem" }}>
+    <div style={{ padding: "var(--card-padding, 2.5rem)", display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "2rem" }}>
       <div>
         <div style={{ fontSize: "0.6rem", letterSpacing: "0.16em", color: "var(--muted)", marginBottom: "1rem" }}>
           // {project.index} — full stack
@@ -164,7 +164,7 @@ function ProjectInfo({ project }: { project: Project }) {
 export default function Projects() {
   return (
     <section id="projetos" style={{ position: "relative", zIndex: 1 }}>
-      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "5rem 3rem" }}>
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "var(--section-padding)" }}>
         <SectionHeader
           eyebrow="// trabalhos selecionados"
           title="Projetos"
@@ -175,7 +175,7 @@ export default function Projects() {
           {projects.map((project) => (
             <article
               key={project.slug}
-              style={{ display: "grid", gridTemplateColumns: "1.1fr 1fr", background: "var(--surface)" }}
+              style={{ display: "grid", gridTemplateColumns: "var(--grid-cols)", background: "var(--surface)" }}
             >
               <ProjectPreview project={project} />
               <ProjectInfo project={project} />

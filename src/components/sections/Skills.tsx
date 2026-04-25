@@ -11,20 +11,20 @@ export default function Skills() {
 
   return (
     <section id="skills" style={{ position: "relative", zIndex: 1, background: "var(--surface2)" }}>
-      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "5rem 3rem" }}>
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "var(--section-padding)" }}>
         <SectionHeader
           eyebrow="// stack técnica"
           title="Skills"
           aside={`${skillCategories.length} categorias`}
         />
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "1px", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "4px 4px 0 0", overflow: "hidden" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1px", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "4px", overflow: "hidden", marginBottom: "1px" }}>
           {top3.map((cat) => (
             <SkillCard key={cat.label} cat={cat} />
           ))}
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: "1px", background: "var(--border)", border: "1px solid var(--border)", borderTop: "none", borderRadius: "0 0 4px 4px", overflow: "hidden" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1px", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "4px", overflow: "hidden" }}>
           {bottom2.map((cat) => (
             <SkillCard key={cat.label} cat={cat} />
           ))}

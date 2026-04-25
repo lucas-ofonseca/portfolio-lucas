@@ -13,6 +13,8 @@ export default function SectionHeader({ eyebrow, title, aside }: SectionHeaderPr
         display: "flex",
         alignItems: "flex-end",
         justifyContent: "space-between",
+        flexWrap: "wrap",
+        gap: "1rem",
         marginBottom: "3.5rem",
         paddingBottom: "1.5rem",
         borderBottom: "1px solid var(--border)",

@@ -1,6 +1,19 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
+import { Syne, JetBrains_Mono } from "next/font/google";
 import "@/styles/globals.css";
+
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-display",
+  weight: ["400", "500", "700", "800"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  weight: ["300", "400", "500"],
+});
 
 export const metadata: Metadata = {
   title: "Lucas Fonseca — Full Stack Developer",
@@ -23,7 +36,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className={`${syne.variable} ${jetbrainsMono.variable}`}>
       <body>{children}</body>
     </html>
   );

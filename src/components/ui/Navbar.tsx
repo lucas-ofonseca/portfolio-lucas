@@ -36,10 +36,12 @@ function NavItem({ href, label }: NavLink) {
 }
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav
       style={{
-        position: "fixed",
+        position: "var(--nav-position, fixed)",
         top: 0,
         left: 0,
         right: 0,
@@ -47,7 +49,7 @@ export default function Navbar() {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        padding: "1.25rem 3rem",
+        padding: "var(--nav-padding)",
         borderBottom: "1px solid var(--border)",
         background: "rgba(10,10,10,0.85)",
         backdropFilter: "blur(12px)",
@@ -62,41 +64,20 @@ export default function Navbar() {
           fontSize: "1rem",
           letterSpacing: "0.08em",
           color: "var(--text)",
+          zIndex: 101,
         }}
       >
         &lt;LF<span style={{ color: "var(--accent)" }}>/</span>&gt;
       </a>
 
-      <ul style={{ display: "flex", gap: "2rem", listStyle: "none" }}>
+      {/* Desktop Menu */}
+      <ul className="desktop-only" style={{ display: "flex", gap: "2rem", listStyle: "none" }}>
         {navLinks.map((link) => (
           <NavItem key={link.href} {...link} />
         ))}
       </ul>
 
-      {/* {personal.available && (
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "0.5rem",
-            fontSize: "0.65rem",
-            color: "var(--accent2)",
-            letterSpacing: "0.1em",
-          }}
-        >
-          <span
-            style={{
-              width: "6px",
-              height: "6px",
-              borderRadius: "50%",
-              background: "var(--accent2)",
-              display: "inline-block",
-              animation: "pulse 2s ease-in-out infinite",
-            }}
-          />
-          open to work
-        </div>
-      )} */}
+      {/* Mobile elements removed as requested */}
     </nav>
   );
 }
