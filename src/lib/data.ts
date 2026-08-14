@@ -114,6 +114,7 @@ export const skillCategories: SkillCategory[] = [
   {
     label: "banco de dados",
     skills: [
+      { name: "SQL", highlight: true },
       { name: "PostgreSQL", highlight: true },
       { name: "Supabase", highlight: true },
       { name: "MongoDB", highlight: false },
@@ -124,8 +125,8 @@ export const skillCategories: SkillCategory[] = [
     label: "dados & bi",
     skills: [
       { name: "Power BI", highlight: true },
-      { name: "Excel", highlight: true },
-      { name: "SAP", highlight: true },
+      { name: "Excel (VBA)", highlight: true },
+      { name: "SAP ECC", highlight: true },
       { name: "Análise de dados", highlight: true },
       { name: "Scikit-learn", highlight: false },
     ],
@@ -133,8 +134,10 @@ export const skillCategories: SkillCategory[] = [
   {
     label: "ferramentas & devops",
     skills: [
-      { name: "Git", highlight: true },
-      { name: "Vite", highlight: true },
+      { name: "Git/GitHub", highlight: true },
+      { name: "AWS", highlight: true },
+      { name: "SCRUM & Kanban", highlight: true },
+      { name: "Vite", highlight: false },
       { name: "IA Agents", highlight: true },
     ],
   },
@@ -148,7 +151,7 @@ export const heroStackTags: HeroTag[] = [
   { name: "JavaScript", highlight: true },
   { name: "PostgreSQL", highlight: true },
   { name: "Power BI", highlight: true },
-  { name: "Excel", highlight: true },
+  { name: "Excel (VBA)", highlight: true },
   { name: "Python", highlight: false },
-  { name: "Next.js", highlight: false },
+  { name: "AWS", highlight: false },
 ];

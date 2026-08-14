@@ -152,6 +152,7 @@ export default function Contact() {
                 <label style={{ fontSize: "0.55rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)" }}>Seu E-mail</label>
                 <input 
                   type="email" 
+                  suppressHydrationWarning
                   placeholder="maria@empresa.com"
                   style={{ 
                     background: "var(--bg)", 
