@@ -66,20 +66,20 @@ export type Project = {
 export const projects: Project[] = [
   {
     index: "01",
-    slug: "sgv",
-    name: "Sistema de Gestão de",
-    nameHighlight: "Viagens",
-    type: "Aplicação web · Projeto pessoal",
+    slug: "cinematch",
+    name: "Cine",
+    nameHighlight: "Match",
+    type: "Sistema de recomendação de filmes · Projeto pessoal",
     description:
-      "Plataforma completa para gerenciamento de viagens corporativas — cadastro de rotas, controle de participantes e dashboard de acompanhamento em tempo real. Arquitetura separada em frontend e backend com padrão Controller → Service → Repository, autenticação via middleware e tratamento centralizado de erros.",
+      "Recomendador de filmes com modelo SVD (RMSE 0,9078) e explicabilidade via similaridade de cossenos em vetores latentes. Pipeline completo: EDA, treinamento, API REST e interface interativa.",
     architecture: [
-      { layer: "frontend", tags: ["React", "Vite", "TypeScript"] },
-      { layer: "backend", tags: ["Node.js", "Express", "TypeScript"] },
-      { layer: "banco", tags: ["Supabase", "PostgreSQL"] },
-      { layer: "deploy", tags: ["Vercel"] },
+      { layer: "modelo", tags: ["Python", "scikit-surprise", "SVD"] },
+      { layer: "backend", tags: ["FastAPI", "SQLAlchemy", "SQLite"] },
+      { layer: "frontend", tags: ["Streamlit"] },
+      { layer: "deploy", tags: ["Joblib", "Plotly"] },
     ],
-    demoUrl: "https://sgv-sistema-viagens.vercel.app/",
-    live: true,
+    githubUrl: "https://github.com/lucas-ofonseca/CineMatch",
+    live: false,
   },
 ];
 
@@ -97,6 +97,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "HTML5", highlight: true },
       { name: "CSS3", highlight: true },
       { name: "TypeScript", highlight: false },
+      { name: "Streamlit", highlight: false },
       { name: "Next.js", highlight: false },
     ],
   },
@@ -106,6 +107,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "Node.js", highlight: true },
       { name: "Express", highlight: true },
       { name: "Python", highlight: false },
+      { name: "FastAPI", highlight: true },
       { name: "REST APIs", highlight: false },
     ],
   },
@@ -125,6 +127,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "Excel", highlight: true },
       { name: "SAP", highlight: true },
       { name: "Análise de dados", highlight: true },
+      { name: "Scikit-learn", highlight: false },
     ],
   },
   {
