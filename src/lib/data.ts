@@ -5,10 +5,10 @@
 
 export const personal = {
   name: "Lucas Fonseca",
-  role: "Data-driven & Full Stack Developer",
-  tagline: "Conectando dados, lógica e código.",
+  role: "Dados, Sistemas e Controle — no código e na operação.",
+  tagline: "Conectando operação, dados e tecnologia.",
   description:
-    "Desenvolvedor Full Stack e técnico de inventário na ArcelorMittal — curso Sistemas de Informação na PUC-MG e construo soluções que unem experiência operacional com tecnologia.",
+    "Analista de dados e sistemas, com experiência em controles internos, auditoria SOX e desenvolvimento full stack. Curso Sistemas de Informação na PUC-MG e construo soluções que unem governança, dados e tecnologia.",
   location: "Belo Horizonte, MG",
   coordinates: "19.9167° S · 43.9345° W",
   available: true,
@@ -30,7 +30,7 @@ export type ExperienceItem = {
 
 export const experience: ExperienceItem[] = [
   {
-    label: "experiência",
+    label: "última experiência",
     title: "ArcelorMittal",
     description:
       "Técnico de Inventário — governança de processos, otimização de estoques e decisões orientadas a dados.",
@@ -92,23 +92,20 @@ export const skillCategories: SkillCategory[] = [
   {
     label: "frontend",
     skills: [
-      { name: "React", highlight: true },
+      { name: "TypeScript", highlight: true },
       { name: "JavaScript", highlight: true },
-      { name: "HTML5", highlight: true },
-      { name: "CSS3", highlight: true },
-      { name: "TypeScript", highlight: false },
+      { name: "React", highlight: true },
       { name: "Streamlit", highlight: false },
-      { name: "Next.js", highlight: false },
+      { name: "Next.js", highlight: false }
     ],
   },
   {
     label: "backend",
     skills: [
-      { name: "Node.js", highlight: true },
-      { name: "Express", highlight: true },
-      { name: "Python", highlight: false },
+      { name: "Python", highlight: true },
       { name: "FastAPI", highlight: true },
-      { name: "REST APIs", highlight: false },
+      { name: "Node.js", highlight: true },
+      { name: "Express", highlight: true }
     ],
   },
   {
@@ -116,9 +113,8 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: "SQL", highlight: true },
       { name: "PostgreSQL", highlight: true },
-      { name: "Supabase", highlight: true },
-      { name: "MongoDB", highlight: false },
-      { name: "MySQL", highlight: false },
+      { name: "MySQL", highlight: true },
+      { name: "MongoDB", highlight: false }
     ],
   },
   {
@@ -127,18 +123,15 @@ export const skillCategories: SkillCategory[] = [
       { name: "Power BI", highlight: true },
       { name: "Excel (VBA)", highlight: true },
       { name: "SAP ECC", highlight: true },
-      { name: "Análise de dados", highlight: true },
-      { name: "Scikit-learn", highlight: false },
+      { name: "Scikit-learn", highlight: false }
     ],
   },
   {
     label: "ferramentas & devops",
     skills: [
       { name: "Git/GitHub", highlight: true },
-      { name: "AWS", highlight: true },
       { name: "SCRUM & Kanban", highlight: true },
-      { name: "Vite", highlight: false },
-      { name: "IA Agents", highlight: true },
+      { name: "AWS", highlight: false }
     ],
   },
 ];
@@ -146,12 +139,11 @@ export const skillCategories: SkillCategory[] = [
 export type HeroTag = { name: string; highlight: boolean };
 
 export const heroStackTags: HeroTag[] = [
+  { name: "TypeScript", highlight: true },
   { name: "React", highlight: true },
+  { name: "Python", highlight: true },
   { name: "Node.js", highlight: true },
-  { name: "JavaScript", highlight: true },
-  { name: "PostgreSQL", highlight: true },
+  { name: "SQL", highlight: true },
   { name: "Power BI", highlight: true },
-  { name: "Excel (VBA)", highlight: true },
-  { name: "Python", highlight: false },
-  { name: "AWS", highlight: false },
+  { name: "Excel (VBA)", highlight: true }
 ];
